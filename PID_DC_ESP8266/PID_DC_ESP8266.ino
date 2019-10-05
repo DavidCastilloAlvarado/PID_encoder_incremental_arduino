@@ -17,7 +17,7 @@ CONEXIÓN::::::::::::::::::::::::::
   D2  = Channel B
   D8  = IN1 --L298N
   D7  = IN2 --L298N
-  D6 = PWM --L298N [8bit resolution ESP8266]
+  D6 = PWM --L298N [10bit resolution ESP8266]
 > L298N (5v & 19v)
   IN1
   IN2
@@ -32,12 +32,12 @@ FUENTES:::::::::::
 byte         cmd       =  0;             // Use for serial comunication.  
 byte         flags;                      // Flag for print values in the serial monitor
 /*------------------------------Variebles for LM298N-------------------------------*/
-int IN1 = D8; 
-int IN2 = D7;
+int IN1  = D8; 
+int IN2  = D7;
 int PWM1 = D6;
 int forWARDS  = 1; 
 int backWARDS = 0;
-float start = 0;
+float start   = 0;
 
 /*------------------------------Variables for incremental encoder----------------------------------*/
 volatile long contador =  0;   
